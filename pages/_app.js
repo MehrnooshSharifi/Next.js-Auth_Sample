@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import LayOute from "../containers/Layout";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <LayOute>
+      <Component {...pageProps} />
+    </LayOute>
+  );
 }
 
-export default MyApp
+export default MyApp;
