@@ -8,6 +8,8 @@ import TodoList from "../components/todos/TodoList";
 import TodoForm from "../components/todos/AddNewTodo";
 import Todo from "../server/models/todo";
 import LayOute from "../containers/Layout";
+import dbConnect from "/server/utils/dbConnect"
+import { useSession } from "next-auth/react";
 
 export default function Home({ todos }) {
   // const [loading, setLoading] = useState(true);
@@ -79,6 +81,7 @@ export default function Home({ todos }) {
 }
 
 export async function getServerSideProps() {
+  dbConnect();
   const todos = await Todo.find({});
   return {
     props: {
