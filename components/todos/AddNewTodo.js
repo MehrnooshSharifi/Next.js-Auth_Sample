@@ -17,7 +17,7 @@ const TodoForm = ({ onAdd }) => {
       <div className="">
         <button
           onClick={() => setIsShow(true)}
-          className="w-full py-2 px-8 font-bold bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 ease-in-out "
+          className=" font-thin text-xs md:text-base md:w-full md:py-2 md:px-8 md:font-bold bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 ease-in-out "
         >
           Add New Todo?
         </button>
