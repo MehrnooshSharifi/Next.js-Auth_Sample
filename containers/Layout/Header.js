@@ -5,8 +5,8 @@ const Header = () => {
   console.log(session);
   return (
     <div className="bg-white w-full shadow-lg ">
-      <nav className="flex justify-between py-4 mb-6 max-w-screen-xl mx-auto">
-        <h1 className="font-bold">
+      <nav className=" text-xs md:text-base flex justify-between md:py-4 md: mb-6 max-w-screen-xl mx-auto">
+        <h1 className=" hidden md:block font-bold">
           <a href="#">TodoList App using Next.js & TailwindCSS</a>
         </h1>
         <ul className={`flex items-center gap-x-6 ${status==="loading" && !session ? "opacity-0" : "opacity-100"}`}>
