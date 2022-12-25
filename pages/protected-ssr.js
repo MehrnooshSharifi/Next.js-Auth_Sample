@@ -3,7 +3,8 @@ import { redirect } from "next/dist/server/api-utils";
 
 const ProtectedSSR = () => {
   const { data: session, status } = useSession();
-  return <h1> Wellcome to Protected SSR Page </h1>;
+  console.log(session);
+  if(session){  return <h1>{session.user.name}  Wellcome to Protected SSR Page </h1>;}
 };
 
 export default ProtectedSSR;
